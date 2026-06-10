@@ -270,19 +270,11 @@ img { max-width: 100%; display: block; }
 }
 
 .hero__product {
+  width: 92%;
   border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transform: rotate(-2deg);
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 60px rgba(53, 214, 210, 0.12);
-}
-
-.hero__product--film {
-  width: 46%;
-  transform: rotate(-3deg) translateX(8%);
-  z-index: 2;
-}
-
-.hero__product--soap {
-  width: 56%;
-  transform: rotate(3deg) translateX(-8%) translateY(6%);
 }
 
 /* ============ Products ============ */
@@ -314,12 +306,13 @@ img { max-width: 100%; display: block; }
   background: radial-gradient(ellipse at center, rgba(53, 214, 210, 0.10), transparent 70%);
   display: grid;
   place-items: center;
-  padding: 30px 30px 0;
+  padding: 30px;
 }
 .product-card__media img {
-  max-height: 360px;
+  max-height: 460px;
   width: auto;
-  border-radius: 12px;
+  border-radius: 14px;
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.45);
 }
 
 .product-card__body {
@@ -464,9 +457,6 @@ img { max-width: 100%; display: block; }
   transition: transform 0.5s ease;
 }
 .audience-card:hover img { transform: scale(1.05); }
-
-.flip-x { transform: scaleX(-1); }
-.audience-card:hover .flip-x { transform: scaleX(-1) scale(1.05); }
 
 .audience-card__overlay {
   position: absolute;
