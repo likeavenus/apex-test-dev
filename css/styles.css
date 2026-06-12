@@ -311,10 +311,11 @@ img { max-width: 100%; display: block; }
   padding: 30px;
 }
 .product-card__media img {
-  max-height: 460px;
-  width: auto;
-  border-radius: 14px;
-  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.45);
+  max-height: 420px;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .product-card__body {
@@ -463,9 +464,9 @@ img { max-width: 100%; display: block; }
 
 .howto__img {
   width: 100%;
-  max-height: 380px;
-  object-fit: cover;
-  object-position: top;
+  display: block;
+  object-fit: contain;
+  background: #000;
 }
 
 .howto__ratio {
