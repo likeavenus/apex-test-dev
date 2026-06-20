@@ -492,7 +492,7 @@ img { max-width: 100%; display: block; }
 
 .why__grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 22px;
 }
 
@@ -641,6 +641,14 @@ img { max-width: 100%; display: block; }
 }
 .cta__features li b { color: var(--text); }
 .cta__features svg { width: 30px; height: 30px; color: var(--accent); flex: none; }
+
+.cta__delivery {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+.cta__delivery span {
+  max-width: 520px;
+}
 
 .cta__card {
   background: var(--bg-card);
