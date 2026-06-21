@@ -29,26 +29,16 @@ npx serve .
 python -m http.server 8080
 ```
 
-## Деплой (GitHub Pages)
+## Деплой
 
-- Репозиторий: https://github.com/likeavenus/apex-test-dev
-- Workflow: `.github/workflows/deploy.yml` — автодеплой при push в `main`
-- Временный URL: https://likeavenus.github.io/apex-test-dev/
-- **Целевой домен:** https://apexgard.ru (файл `CNAME` в корне)
+**Продакшен:** VPS заказчика в Selectel + nginx + Let's Encrypt.  
+Инструкция для заказчика: `docs/INSTRUKCIYA-SERVER-ZAKAZCHIKU.md`  
+Чеклист разработчика: `docs/DEPLOY-VPS-DEV.md`
 
-### Подключение домена
-
-1. Заказчик добавляет DNS в Selectel → см. `docs/INSTRUKCIYA-ZAKAZCHIKU.md`
-2. GitHub → Settings → Pages → Custom domain: `apexgard.ru` → Enforce HTTPS
-3. Проверить `apexgard.ru` и `www.apexgard.ru`
-
-### QR и аналитика
-
-- QR: `assets/qr-apexgard.png`, ссылка с UTM — см. `docs/QR-KOD.md`
-- Яндекс Метрика: код вставить в `index.html` (место помечено комментарием)
+**Демо (временно):** https://likeavenus.github.io/apex-test-dev/ — не использовать с apexgard.ru.
 
 ## TODO
 
-- [ ] Заказчик: DNS-записи в Selectel
-- [ ] GitHub Pages: custom domain + HTTPS (после DNS)
+- [ ] Заказчик: VPS + DNS + SSH
+- [ ] Деплой на VPS
 - [ ] Код Яндекс Метрики от заказчика
