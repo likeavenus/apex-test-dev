@@ -31,22 +31,24 @@ python -m http.server 8080
 
 ## Деплой (GitHub Pages)
 
-В репозитории уже лежит workflow `.github/workflows/deploy.yml` — деплой происходит автоматически при каждом пуше в `main`.
+- Репозиторий: https://github.com/likeavenus/apex-test-dev
+- Workflow: `.github/workflows/deploy.yml` — автодеплой при push в `main`
+- Временный URL: https://likeavenus.github.io/apex-test-dev/
+- **Целевой домен:** https://apexgard.ru (файл `CNAME` в корне)
 
-Шаги после создания репозитория на GitHub:
+### Подключение домена
 
-```bash
-git remote add origin https://github.com/<user>/<repo>.git
-git push -u origin main
-```
+1. Заказчик добавляет DNS в Selectel → см. `docs/INSTRUKCIYA-ZAKAZCHIKU.md`
+2. GitHub → Settings → Pages → Custom domain: `apexgard.ru` → Enforce HTTPS
+3. Проверить `apexgard.ru` и `www.apexgard.ru`
 
-Затем в настройках репозитория: **Settings → Pages → Source: GitHub Actions**.
-После первого успешного workflow сайт будет доступен по адресу `https://<user>.github.io/<repo>/`.
+### QR и аналитика
 
-Все пути в проекте относительные, поэтому сайт корректно работает из подпапки `/<repo>/`.
+- QR: `assets/qr-apexgard.png`, ссылка с UTM — см. `docs/QR-KOD.md`
+- Яндекс Метрика: код вставить в `index.html` (место помечено комментарием)
 
 ## TODO
 
-- [ ] Финальные картинки от заказчика (текущие фото — временные)
-- [ ] Финальная инструкция по использованию Wrap Soap (текущая — заглушка)
-- [ ] Код Яндекс Метрики от заказчика (место помечено комментарием в `index.html` перед `</body>`)
+- [ ] Заказчик: DNS-записи в Selectel
+- [ ] GitHub Pages: custom domain + HTTPS (после DNS)
+- [ ] Код Яндекс Метрики от заказчика
